@@ -1,6 +1,6 @@
 body{
-  background-color: #e1f1f6;
-  font-family: Helvetica, sans-serif;
+  background-color: #F7F7F7;
+  font-family: 'Montserrat', sans-serif;
   color: #222;
 }
 
@@ -49,43 +49,55 @@ body{
     margin: 0 0 20px 0;
     padding: 0 0 20px 0;
     border-bottom: 1px solid #eaeaea;
+    display: flex;
+    transition: .3s ease-in-out;
   }
+    .student-item:hover {
+        transform: scale(1.05);
+    }
+
+    .student-item:hover .student-details h3 {
+        color: rgba(203, 134, 115, 1);
+    }
 
     .student-details{
       width: 50%;
-      float: left;
+      display: flex;
     }
 
       .student-details .avatar{
         width: 40px;
-        height: auto;
+        height: 40px;
         border-radius: 20px;
-        float: left;
-        margin-right: 14px
+        margin-right: 14px;
+        filter: grayscale(100%);
       }
 
       .student-details h3{
         margin: 4px 0 2px 0;
-        font-weight: bold;
-        color: #4ba6c3;
+        font-weight: 500;
+        color: rgba(203, 134, 115, 1);
+        transition: .3s ease-in-out;
       }
 
       .student-details .email{
         color: #888;
         font-size: 14px;
+        font-weight: 300;
       }
 
 
     .joined-details{
       width: 50%;
-      float: left;
       text-align: right;
+      display: none;
     }
 
       .joined-details .date{
         margin-top: 15px;
         display: block;
         font-size: 14px;
+        font-weight: 300;
         color: #999;
       }
 
@@ -99,7 +111,7 @@ body{
   margin: 40px 0 0 0;
   text-align: center;
 }
- 
+
   .pagination li{
     display: inline;
   }
@@ -116,4 +128,14 @@ body{
     .pagination li a:hover{
       background-color: #4ba6c3;
       color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        .joined-details {
+            display: block;
+        }
+
+        .student-details h3 {
+            color: #b5b5b5;
+        }
     }
