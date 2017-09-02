@@ -5,11 +5,13 @@ body{
 }
 
 .page{
-  margin: 50px auto;
-  width: 70%;
+  margin: 0 auto;
+  width: 100%;
   background-color: #fff;
   border-radius: 5px;
-  padding: 50px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header{
@@ -43,14 +45,20 @@ body{
       color: #fff
     }
 
-.student-list{}
+.student-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
   .student-item{
     margin: 0 0 20px 0;
     padding: 0 0 20px 0;
     border-bottom: 1px solid #eaeaea;
-    display: flex;
     transition: .3s ease-in-out;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
   }
     .student-item:hover {
         transform: scale(1.05);
@@ -130,12 +138,23 @@ body{
       color: #fff;
     }
 
-    @media (min-width: 768px) {
-        .joined-details {
-            display: block;
-        }
+@media (min-width: 768px) {
 
-        .student-details h3 {
-            color: #b5b5b5;
-        }
+    .page {
+        width: 70%;
+        margin: 70px auto;
+        padding: 50px;
     }
+
+    .student-item {
+        width: 100%;
+    }
+
+    .joined-details {
+        display: block;
+    }
+
+    .student-details h3 {
+        color: #b5b5b5;
+    }
+}
