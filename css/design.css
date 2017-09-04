@@ -54,7 +54,6 @@ body{
   .student-item{
     margin: 0 0 20px 0;
     padding: 0 0 20px 0;
-    border-bottom: 1px solid #eaeaea;
     transition: .3s ease-in-out;
     width: 95%;
     display: flex;
@@ -109,11 +108,7 @@ body{
         color: #999;
       }
 
-  .student-item:last-child{
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-  }
+
 
 .pagination{
   margin: 40px 0 0 0;
@@ -148,6 +143,13 @@ body{
 
     .student-item {
         width: 100%;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .student-item:last-child{
+      margin: 0;
+      padding: 0;
+      border-bottom: none;
     }
 
     .joined-details {
